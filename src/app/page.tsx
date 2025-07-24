@@ -1,5 +1,5 @@
 import ArticleCard, { Article } from '../components/ArticleCard';
-import Hero from '../components/Hero';
+import HeroSlider from '../components/HeroSlider';
 import AdminCard, { Admin } from '../components/AdminCard';
 
 const articles: Article[] = [
@@ -39,7 +39,7 @@ const admins: Admin[] = [
 export default function Home() {
   return (
     <div className="font-sans bg-neutral-50 dark:bg-neutral-900 min-h-screen">
-      <Hero />
+      <HeroSlider />
       <header className="p-8 text-center">
         <h1 className="text-3xl font-bold">Political News</h1>
         <p className="text-neutral-600 dark:text-neutral-300">
