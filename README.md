@@ -1,37 +1,48 @@
-This is a simple political news website inspired by the style of [whitehouse.gov](https://www.whitehouse.gov). It was built using [Next.js](https://nextjs.org) and Tailwind CSS.
+Энэ бол [whitehouse.gov](https://www.whitehouse.gov) сайтын хэв маягаас санаа
+авсан энгийн улс төрийн мэдээний вэбсайт юм. [Next.js](https://nextjs.org)
+болон Tailwind CSS ашиглан бүтээв.
 
-## Getting Started
+## Эхлэх
 
-First, run the development server:
+Эхлээд хөгжүүлэлтийн серверийг ажиллуулна уу:
 
 ```bash
 npm run dev
-# or
+# эсвэл
 yarn dev
-# or
+# эсвэл
 pnpm dev
-# or
+# эсвэл
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Үр дүнг харахын тулд хөтөчөөрөө [http://localhost:3000](http://localhost:3000)
+хаяг руу орно уу.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`app/page.tsx` файлыг зассанаар хуудсыг өөрчилж эхлэх боломжтой. Файлыг засах
+үлдэнгүүт хуудас автоматаар шинэчлэгдэнэ.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Энэ төсөл нь [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)
+-ийг ашиглан Vercel-ийн шинэ шрифт болох
+[Geist](https://vercel.com/font)-ийг автоматаар оновчтой болгож ачаалдаг.
 
-## Learn More
+## Дэлгэрэнгүй суралцах
 
-To learn more about Next.js, take a look at the following resources:
+Next.js-ийн талаар илүү ихийг мэдэхийг хүсвэл дараах эх сурвалжуудыг үзнэ үү:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js баримт бичиг](https://nextjs.org/docs) - Next.js-ийн боломж, API-тай
+  танилцана уу.
+- [Next.js суралцах](https://nextjs.org/learn) - интерактив сургалт.
 
+[Next.js-ийн GitHub репозиторыг](https://github.com/vercel/next.js) үзээрэй
+- таны санал, хувь нэмрийг урьж байна!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Vercel дээр байрлуулах
 
-## Deploy on Vercel
+Next.js апп-аа байрлуулах хамгийн хялбар арга бол Next.js-ийн бүтээгчдийн
+[Vercel платформыг](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+ашгах явдал юм.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Манай
+[Next.js байршуулалтын баримт бичгийг](https://nextjs.org/docs/app/building-your-application/deploying)
+дэлгэрэнгүй үзээрэй.
