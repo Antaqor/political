@@ -1,5 +1,6 @@
 import ArticleCard, { Article } from '../components/ArticleCard';
 import Hero from '../components/Hero';
+import AdminCard, { Admin } from '../components/AdminCard';
 
 const articles: Article[] = [
   {
@@ -28,6 +29,13 @@ const articles: Article[] = [
   },
 ];
 
+const admins: Admin[] = [
+  { id: '1', name: 'Alex Morgan', role: 'Chief of Staff' },
+  { id: '2', name: 'Jamie Lee', role: 'Communications Director' },
+  { id: '3', name: 'Riley Chen', role: 'Policy Advisor' },
+  { id: '4', name: 'Jordan Patel', role: 'Press Secretary' },
+];
+
 export default function Home() {
   return (
     <div className="font-sans bg-neutral-50 dark:bg-neutral-900 min-h-screen">
@@ -38,13 +46,23 @@ export default function Home() {
           Latest headlines from around the world
         </p>
       </header>
-      <main className="p-8">
-        <h2 className="text-2xl font-semibold mb-4">Latest Articles</h2>
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-          {articles.map((article) => (
-            <ArticleCard key={article.id} article={article} />
-          ))}
-        </div>
+      <main className="p-8 space-y-12">
+        <section>
+          <h2 className="text-2xl font-semibold mb-4 text-center">Administrators</h2>
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+            {admins.map((admin) => (
+              <AdminCard key={admin.id} admin={admin} />
+            ))}
+          </div>
+        </section>
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">Recent News</h2>
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+            {articles.map((article) => (
+              <ArticleCard key={article.id} article={article} />
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );
