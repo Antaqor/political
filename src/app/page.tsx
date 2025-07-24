@@ -1,4 +1,5 @@
 import ArticleCard, { Article } from '../components/ArticleCard';
+import Hero from '../components/Hero';
 
 const articles: Article[] = [
   {
@@ -30,16 +31,20 @@ const articles: Article[] = [
 export default function Home() {
   return (
     <div className="font-sans bg-neutral-50 dark:bg-neutral-900 min-h-screen">
+      <Hero />
       <header className="p-8 text-center">
         <h1 className="text-3xl font-bold">Political News</h1>
         <p className="text-neutral-600 dark:text-neutral-300">
           Latest headlines from around the world
         </p>
       </header>
-      <main className="grid gap-6 p-8 sm:grid-cols-2 md:grid-cols-3">
-        {articles.map((article) => (
-          <ArticleCard key={article.id} article={article} />
-        ))}
+      <main className="p-8">
+        <h2 className="text-2xl font-semibold mb-4">Latest Articles</h2>
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+          {articles.map((article) => (
+            <ArticleCard key={article.id} article={article} />
+          ))}
+        </div>
       </main>
     </div>
   );
