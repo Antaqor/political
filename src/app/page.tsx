@@ -39,12 +39,14 @@ const admins: Admin[] = [
 export default function Home() {
   return (
     <div className="font-sans bg-neutral-50 dark:bg-neutral-900 min-h-screen">
-      <HeroSlider />
-      <header className="p-8 text-center">
-        <h1 className="text-3xl font-bold">Улс төрийн мэдээ</h1>
-        <p className="text-neutral-600 dark:text-neutral-300">
-          Дэлхий даяарх хамгийн сүүлийн үеийн гарчигууд
-        </p>
+      <header className="text-center">
+        <HeroSlider />
+        <div className="p-8">
+          <h1 className="text-3xl font-bold">Улс төрийн мэдээ</h1>
+          <p className="text-neutral-600 dark:text-neutral-300">
+            Дэлхий даяарх хамгийн сүүлийн үеийн гарчигууд
+          </p>
+        </div>
       </header>
       <main className="p-8 space-y-12">
         <section>
