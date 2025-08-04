@@ -1,25 +1,24 @@
 'use client';
 
-import Image from 'next/image';
 import { useState, useEffect, useCallback } from 'react';
 
 interface Slide {
   src: string;
-  alt: string;
+  title: string;
 }
 
 const slides: Slide[] = [
   {
-    src: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=60',
-    alt: 'Нар жаргах үеийн Капитолын ордон',
+    src: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
+    title: 'Цэцэг дээрх эрвээхэй',
   },
   {
-    src: 'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1200&q=60',
-    alt: 'Туг барьсан хүмүүс',
+    src: 'https://www.w3schools.com/html/mov_bbb.mp4',
+    title: 'Big Buck Bunny трейлер',
   },
   {
-    src: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=1200&q=60',
-    alt: 'Засгийн газрын хурлын танхим',
+    src: 'https://www.w3schools.com/html/movie.mp4',
+    title: 'Демо видео',
   },
 ];
 
@@ -42,14 +41,22 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section className="relative h-64 md:h-96 overflow-hidden" aria-label="Херог" >
+    <section className="relative h-64 md:h-96 overflow-hidden" aria-label="Херог">
       {slides.map((slide, i) => (
         <div
           key={slide.src}
           className={`absolute inset-0 transition-opacity duration-700 ${i === index ? 'opacity-100' : 'opacity-0'}`}
           aria-hidden={i !== index}
         >
-          <Image src={slide.src} alt={slide.alt} fill sizes="100vw" className="object-cover" />
+          <video
+            src={slide.src}
+            className="h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            aria-label={slide.title}
+          />
           <div className="absolute inset-0 bg-blue-900/60 flex items-center justify-center">
             <h1 className="text-white text-3xl md:text-5xl font-bold text-center px-4">
               Иргэдийг хүчирхэгжүүлж, илүү хүчтэй маргаашийг бүтээе
